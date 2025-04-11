@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "photos",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "photo": "D:\\BM\\UNOPS\\S7_Cola - Copy\\CR10.JPG", "filename": "CR10", "directory": "D:\\BM\\UNOPS\\S7_Cola - Copy", "altitude": 44.0, "direction": 220.81, "rotation": 0, "longitude": "35.495353638888886", "latitude": "33.87652633333333", "timestamp": "2024-04-21T15:06:00", "auxiliary_storage_labeling_positionx": 35.495624356118967, "auxiliary_storage_labeling_positiony": 33.876630541981747 }, "geometry": { "type": "Point", "coordinates": [ 35.495353638888886, 33.876526333333331, 44.0 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "photo": "D:\\BM\\UNOPS\\S7_Cola - Copy\\CR17.JPG", "filename": "CR17", "directory": "D:\\BM\\UNOPS\\S7_Cola - Copy", "altitude": 46.0, "direction": 11.11, "rotation": 0, "longitude": "35.495399222222225", "latitude": "33.87566675", "timestamp": "2024-04-21T15:06:51", "auxiliary_storage_labeling_positionx": 35.495764599246087, "auxiliary_storage_labeling_positiony": 33.875599673657277 }, "geometry": { "type": "Point", "coordinates": [ 35.495399222222225, 33.87566675, 46.0 ] } },
+{ "type": "Feature", "properties": { "fid": 10, "photo": "D:\\BM\\UNOPS\\S7_Cola - Copy\\CR25.JPG", "filename": "CR25", "directory": "D:\\BM\\UNOPS\\S7_Cola - Copy", "altitude": 46.0, "direction": 173.52, "rotation": 0, "longitude": "35.49489766666667", "latitude": "33.87579366666667", "timestamp": "2024-04-21T15:09:13", "auxiliary_storage_labeling_positionx": 35.494448663533085, "auxiliary_storage_labeling_positiony": 33.875524241549513 }, "geometry": { "type": "Point", "coordinates": [ 35.494897666666667, 33.875793666666667, 46.0 ] } }
+]
+}

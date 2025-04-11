@@ -1,0 +1,124 @@
+/* Import IBM Plex Mono font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* Map container */
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+/* Map title */
+.map-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    margin: 10px;
+}
+
+/* North arrow container */
+.north-arrow {
+    background: white;
+    padding: 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    margin: 10px;
+}
+
+.north-arrow img {
+    width: 30px;
+    height: auto;
+}
+
+/* Layer control customization */
+.leaflet-control-layers {
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Scale bar customization */
+.leaflet-control-scale {
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.leaflet-control-scale-line {
+    border: 2px solid #333 !important;
+    border-top: none !important;
+    color: #333 !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Buildings layer */
+.buildings-layer {
+    fill: #808080;
+    fill-opacity: 0.6;
+    stroke: #404040;
+    stroke-width: 1px;
+}
+
+/* CR node labels */
+.cr-node-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 2px 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Landmark tooltips */
+.landmark-tooltip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; /* Adjust size as needed */
+    font-weight: 400;
+}
+
+/* Photo tooltips */
+.photo-tooltip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.photo-tooltip .photo-thumbnail {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    background: white;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+
+/* Detailed zones labels */
+.det-zone-label {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFA500;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateX(-120%); /* Move the label further left of its anchor point */
+}
+

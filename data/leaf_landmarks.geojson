@@ -1,0 +1,93 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 381,
+        "Name": "Mohamad Chamel School",
+        "OBJECTID": 259,
+        "Governance": "YES",
+        "URL": " ",
+        "GlobalID": "13855d5b-b384-409c-bcdb-e02708c79ed6",
+        "CreationDate": "2020-05-26T17:38:33.161",
+        "Creator": "alisaad@unhabitat",
+        "EditDate": "2023-03-28T11:03:54.889",
+        "Editor": "alisaad@unhabitat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.499377550790264,
+          33.87500555246601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 389,
+        "Name": "Beirut Municipal Stadium",
+        "OBJECTID": 267,
+        "Governance": " ",
+        "URL": " ",
+        "GlobalID": "1829c6e5-fcbd-4869-9b67-16e6879b5d96",
+        "CreationDate": "2020-05-26T17:38:33.161",
+        "Creator": "alisaad@unhabitat",
+        "EditDate": "2023-03-28T11:03:54.889",
+        "Editor": "alisaad@unhabitat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.49864381372366,
+          33.874698231248345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 390,
+        "Name": "Fire Department",
+        "OBJECTID": 268,
+        "Governance": " ",
+        "URL": " ",
+        "GlobalID": "9de2855a-cf93-436c-8224-5a55c365a173",
+        "CreationDate": "2020-05-26T17:38:33.161",
+        "Creator": "alisaad@unhabitat",
+        "EditDate": "2023-03-28T11:03:54.889",
+        "Editor": "alisaad@unhabitat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.49829537802054,
+          33.87532145202232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 583,
+        "Name": "Omar El-Zini Public School",
+        "OBJECTID": 0,
+        "Governance": " ",
+        "URL": " ",
+        "GlobalID": "987232d3-de37-4feb-a782-c2187a18887a",
+        "CreationDate": "2020-05-26T17:38:33.161",
+        "Creator": "alisaad@unhabitat",
+        "EditDate": "2023-03-28T11:03:54.889",
+        "Editor": "alisaad@unhabitat"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.49903825108149,
+          33.87509685754201
+        ]
+      }
+    }
+  ]
+}

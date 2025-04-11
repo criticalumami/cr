@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "parks_filtered",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 22, "OBJECTID_1": null, "OBJECTID": null, "PID": null, "POINT_X": null, "POINT_Y": null, "dip": null, "area": null, "G_name": null, "case_": null, "owner": null, "GlobalID": null, "Shape__Area": null, "Shape__Length": null, "CreationDate": null, "Creator": null, "EditDate": null, "Editor": null, "Ar_Name": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 35.494601654190397, 33.875409039228913, 0.0 ], [ 35.493584915166871, 33.875691883553735, 0.0 ], [ 35.493550583719326, 33.875577868899903, 0.0 ], [ 35.49354002019701, 33.875487972623162, 0.0 ], [ 35.493537379316415, 33.875373957696929, 0.0 ], [ 35.493563788122223, 33.875279676008248, 0.0 ], [ 35.493603401330944, 33.875187586816438, 0.0 ], [ 35.493652871883597, 33.875149119693916, 0.0 ], [ 35.493731286840521, 33.875123302146278, 0.0 ], [ 35.494760752722904, 33.874784357354351, 0.0 ], [ 35.494601654190397, 33.875409039228913, 0.0 ] ] ] ] } }
+]
+}
