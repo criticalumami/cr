@@ -224,6 +224,15 @@ html, body {
     color: #333;
 }
 
+.leaflet-control-fullscreen {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
