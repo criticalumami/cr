@@ -86,52 +86,6 @@ function initMap() {
     
     // Create layer control
     layerControl = L.control.layers(baseMaps, {}, { position: 'bottomright' }).addTo(map);
-
-    // Add the fullscreen button
-    const fullscreenButton = L.control({ position: 'topright' });
-    fullscreenButton.onAdd = function(map) {
-        const div = L.DomUtil.create('div', 'leaflet-control-fullscreen');
-        div.innerHTML = '🔲';  // You can replace this with an icon or custom text
-
-        div.style.cursor = 'pointer';
-
-        // Add click event to toggle fullscreen mode
-        div.addEventListener('click', () => toggleFullscreen(map));
-
-        return div;
-    };
-    fullscreenButton.addTo(map);
-}
-
-// Function to toggle fullscreen mode
-function toggleFullscreen() {
-    if (!document.fullscreenElement &&     // Check if not in fullscreen
-        !document.mozFullScreenElement &&  // Firefox
-        !document.webkitFullscreenElement && // Chrome, Safari, Opera
-        !document.msFullscreenElement) {  // IE/Edge
-        // If not in fullscreen, request fullscreen
-        const mapContainer = document.getElementById('map'); // Your map container ID
-        if (mapContainer.requestFullscreen) {
-            mapContainer.requestFullscreen();
-        } else if (mapContainer.mozRequestFullScreen) { // Firefox
-            mapContainer.mozRequestFullScreen();
-        } else if (mapContainer.webkitRequestFullscreen) { // Chrome, Safari, Opera
-            mapContainer.webkitRequestFullscreen();
-        } else if (mapContainer.msRequestFullscreen) { // IE/Edge
-            mapContainer.msRequestFullscreen();
-        }
-    } else {
-        // If already in fullscreen, exit fullscreen
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) { // Firefox
-            document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) { // Chrome, Safari, Opera
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { // IE/Edge
-            document.msExitFullscreen();
-        }
-    }
 }
 
 // Set up map controls (title, scale, north arrow)
@@ -165,8 +119,6 @@ function setupControls() {
 
 // Load all data layers
 function loadData() {
-    showLoading();
-    
     loadBoundary()
         .then(() => {
             // Load other layers in parallel after boundary is loaded
@@ -182,9 +134,6 @@ function loadData() {
         })
         .catch(error => {
             console.error('Error loading map data:', error);
-        })
-        .finally(() => {
-            hideLoading();
         });
 }
 
