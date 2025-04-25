@@ -64,7 +64,31 @@ const ICONS = {
 function initMap() {
     map = L.map('map', { 
         attributionControl: false,
-        zoomControl: true
+        zoomControl: true,
+        scrollWheelZoom: false  // Disable scroll wheel zoom by default
+    });
+
+    // Add interaction message control
+    const interactionMsg = L.control({position: 'topleft'});
+    interactionMsg.onAdd = function() {
+        const div = L.DomUtil.create('div', 'map-interaction-msg');
+        div.innerHTML = 'Click map to enable zoom';
+        return div;
+    };
+    interactionMsg.addTo(map);
+
+    // Enable scroll zoom only when map receives focus through clicking
+    map.on('click', function() {
+        if (!map.scrollWheelZoom.enabled()) {
+            map.scrollWheelZoom.enable();
+            document.querySelector('.map-interaction-msg').style.display = 'none';
+        }
+    });
+    
+    // Disable scroll zoom when mouse leaves the map
+    map.on('mouseout', function() {
+        map.scrollWheelZoom.disable();
+        document.querySelector('.map-interaction-msg').style.display = 'block';
     });
 
     // Define basemaps
@@ -119,6 +143,8 @@ function setupControls() {
 
 // Load all data layers
 function loadData() {
+    showLoading();
+    
     loadBoundary()
         .then(() => {
             // Load other layers in parallel after boundary is loaded
@@ -134,6 +160,9 @@ function loadData() {
         })
         .catch(error => {
             console.error('Error loading map data:', error);
+        })
+        .finally(() => {
+            hideLoading();
         });
 }
 
@@ -414,36 +443,13 @@ function toTitleCase(str) {
             return ' ' + p1;
         })
         .trim();
-}// Show/hide loading indicator
+}
+
+// Show/hide loading indicator
 function showLoading() {
     document.getElementById('loading').classList.remove('hidden');
 }
 
 function hideLoading() {
     document.getElementById('loading').classList.add('hidden');
-}
-
-// Update your loadData function
-function loadData() {
-    showLoading();
-    
-    loadBoundary()
-        .then(() => {
-            // Load other layers in parallel after boundary is loaded
-            return Promise.all([
-                loadLayer('buildings', 'data/buildings.geojson', STYLES.buildings, true),
-                loadLandmarks(),
-                loadLayer('surveyLines', 'data/surv.geojson', { style: STYLES.surveyLines }, true),
-                loadLayer('parks', 'data/parks_filtered.geojson', { style: STYLES.parks }, true),
-                loadPhotos(),
-                loadCRNodes(),
-                loadDetailedZones()
-            ]);
-        })
-        .catch(error => {
-            console.error('Error loading map data:', error);
-        })
-        .finally(() => {
-            hideLoading();
-        });
 }
