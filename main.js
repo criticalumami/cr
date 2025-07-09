@@ -301,7 +301,6 @@ function loadPhotos() {
                 }
             });
             
-            photosLayer.addTo(map);
             layers.photos = photosLayer;
             layerControl.addOverlay(photosLayer, 'Photos');
             
@@ -352,7 +351,6 @@ function loadCRNodes() {
                 }
             });
             
-            crNodesLayer.addTo(map);
             layers.crNodes = crNodesLayer;
             layerControl.addOverlay(crNodesLayer, 'CR Nodes');
             
@@ -402,14 +400,14 @@ function addZoneLabel(feature, layer) {
     const bounds = layer.getBounds();
     const west = bounds.getWest();
     const width = bounds.getEast() - west;
-    const labelPoint = L.latLng(bounds.getCenter().lat, west - width * 0.5);
+    const labelPoint = bounds.getCenter();
     
     // Create a point marker for the label
     const labelMarker = L.marker(labelPoint, {
         icon: L.divIcon({
             className: 'det-zone-label',
             html: feature.properties.name,
-            iconAnchor: [0, 12]
+            iconAnchor: [0, 0]
         })
     });
     

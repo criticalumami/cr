@@ -86,6 +86,7 @@ html, body {
     font-family: 'Courier', monospace;
     font-size: 12px;
     font-weight: 400;
+    text-decoration: underline;
 }
 
 /* CR node labels */
@@ -98,6 +99,7 @@ html, body {
     border-radius: 4px;
     padding: 2px 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
 }
 
 /* Landmark tooltips */
@@ -114,6 +116,7 @@ html, body {
     background: none;
     border: none;
     box-shadow: none;
+    text-decoration: underline;
 }
 
 .photo-tooltip .photo-thumbnail {
@@ -135,15 +138,11 @@ html, body {
     font-family: 'Courier', monospace;
     font-size: 14px;
     font-weight: 500;
-    color: #FFA500;
-    text-shadow: 
-        -1px -1px 0 #fff, 
-        1px -1px 0 #fff, 
-        -1px 1px 0 #fff, 
-        1px 1px 0 #fff;
+    color: black;
     white-space: nowrap;
     pointer-events: none;
-    transform: translateX(-120%);
+    transform: translate(-50%, -50%);
+    text-decoration: underline;
 }
 
 /* Apply common control styling to Leaflet controls */
