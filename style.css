@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
 }
 
 #map {
@@ -33,6 +33,7 @@ html, body {
     font-weight: 500;
     color: #333;
     padding: 8px 12px;
+    font-family: 'Courier', monospace;
 }
 
 /* North arrow */
@@ -82,14 +83,14 @@ html, body {
 ------------------------------------------ */
 /* Base tooltip style */
 .custom-tooltip {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
     font-size: 12px;
     font-weight: 400;
 }
 
 /* CR node labels */
 .cr-node-label {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
     font-weight: 700;
     font-size: 16px;
     background: white;
@@ -106,7 +107,7 @@ html, body {
 
 /* Photo tooltips */
 .photo-tooltip {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
     font-size: 12px;
     font-weight: 400;
     padding: 0;
@@ -131,7 +132,7 @@ html, body {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
     font-size: 14px;
     font-weight: 500;
     color: #FFA500;
@@ -219,7 +220,7 @@ html, body {
 }
 
 .loading-text {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Courier', monospace;
     font-size: 14px;
     color: #333;
 }
@@ -238,54 +239,19 @@ html, body {
     100% { transform: rotate(360deg); }
 }
 
-/* Map interaction message container */
-.leaflet-control-container-center {
+/* New Overlay */
+#overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1001;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Map interaction message */
-.map-interaction-msg {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 16px 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-
-/* Blur overlay */
-.map-blur-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 1000;
-    pointer-events: none;
-}
-
-/* Override Leaflet control positioning for center position */
-.leaflet-control-container .leaflet-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }

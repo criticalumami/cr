@@ -68,37 +68,20 @@ function initMap() {
         scrollWheelZoom: false  // Disable scroll wheel zoom by default
     });
 
-    // Create a custom control center position
-    const centerControlDiv = document.createElement('div');
-    centerControlDiv.className = 'leaflet-control-container-center';
-    map.getContainer().appendChild(centerControlDiv);
-
-    // Add interaction message
-    const interactionMsg = document.createElement('div');
-    interactionMsg.className = 'map-interaction-msg';
-    interactionMsg.innerHTML = 'Click to enable zoom';
-    centerControlDiv.appendChild(interactionMsg);
-
-    // Add blur overlay
-    const blurOverlay = document.createElement('div');
-    blurOverlay.className = 'map-blur-overlay';
-    map.getContainer().appendChild(blurOverlay);
+    // Get reference to the new overlay
+    const overlay = document.getElementById('overlay');
 
     // Enable scroll zoom only when map receives focus through clicking
-    map.on('click', function() {
+    overlay.addEventListener('click', function() {
         if (!map.scrollWheelZoom.enabled()) {
             map.scrollWheelZoom.enable();
-            interactionMsg.style.display = 'none';
-            blurOverlay.style.display = 'none';
+            overlay.style.display = 'none';
         }
     });
     
-    // Disable scroll zoom when mouse leaves the map
-    map.on('mouseout', function() {
-        map.scrollWheelZoom.disable();
-        interactionMsg.style.display = 'flex';
-        blurOverlay.style.display = 'block';
-    });
+    
+
+    
 
     // Define basemaps
     const baseMaps = {
