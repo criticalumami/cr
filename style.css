@@ -230,7 +230,6 @@ html, body {
     padding: 8px;
     border-radius: 4px;
     font-size: 18px;
-    font-weight: bold;
 }
 
 @keyframes spin {
@@ -252,5 +251,7 @@ html, body {
     z-index: 1001;
     color: rgb(0, 0, 0);
     font-size: 24px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
 }
